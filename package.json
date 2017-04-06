@@ -1,0 +1,41 @@
+{
+  "name": "redux-observable-stream-lite",
+  "version": "1.0.0",
+  "description": "Redux observable using stream-lite",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel --out-dir . --ignore *.test.js src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pshev/redux-observable-stream-lite.git"
+  },
+  "author": "Peter Shev <piotrsevcenco@gmail.com> (http://petershev.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.24.0",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-es2015": "6.24.0",
+    "babel-preset-react": "6.23.0",
+    "babel-preset-stage-2": "6.22.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "h"
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "stream-lite": "2.1.2"
+  }
+}
