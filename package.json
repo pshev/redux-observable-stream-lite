@@ -1,6 +1,6 @@
 {
   "name": "redux-observable-stream-lite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redux observable using stream-lite",
   "main": "index.js",
   "scripts": {
@@ -36,6 +36,6 @@
     ]
   },
   "dependencies": {
-    "stream-lite": "2.1.2"
+    "stream-lite": "*"
   }
 }
