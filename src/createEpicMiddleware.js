@@ -1,20 +1,20 @@
-import 'stream-lite/add/operators/filter'
-import 'stream-lite/add/operators/switchMap'
-import Stream from 'stream-lite'
+import {create, subscribe} from 'stream-lite/es'
+import {filter, switchMap} from 'stream-lite/es/operators'
 
 export function createEpicMiddleware(epic, options = {}) {
-  const epic$ = Stream.create()
-  const action$ = Stream.create()
+  const epic$ = create()
+  const action$ = create()
 
-  action$.ofType = type => action$.filter(action => action.type === type)
+  action$.ofType = type => action$.pipe(filter(action => action.type === type))
 
   let store
   const epicMiddleware = _store => {
     store = _store
     return next => {
-      epic$
-        .switchMap(epic => epic(action$, store, options.dependencies))
-        .subscribe(store.dispatch)
+      epic$.pipe(
+        switchMap(epic => epic(action$, store, options.dependencies)),
+        subscribe(store.dispatch)
+      )
 
       epic$.next(epic)
 

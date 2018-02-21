@@ -19,6 +19,6 @@
     "microbundle": "0.4.3"
   },
   "dependencies": {
-    "stream-lite": "*"
+    "stream-lite": "^3.0.0"
   }
 }

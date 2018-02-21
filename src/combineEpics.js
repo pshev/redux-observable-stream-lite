@@ -1,5 +1,4 @@
-import 'stream-lite/add/operators/merge'
-import Stream from 'stream-lite'
+import {merge} from 'stream-lite/es/statics'
 
 export const combineEpics = (...epics) => (...args) =>
-  Stream.merge(...epics.map(epic => epic(...args)))
+  merge(...epics.map(epic => epic(...args)))
