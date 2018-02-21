@@ -8,4 +8,4 @@ While `redux-observable` allows you to write an adapter to convert Rx Observable
 
 <br/>
 
-This package export the same API as [`redux-observable`](https://github.com/redux-observable/redux-observable) except without the support for adapters.
+This package export the same API as [`redux-observable`](https://github.com/redux-observable/redux-observable) except: 1) no the support for adapters. 2) `toPayload` pipeable operator is included.

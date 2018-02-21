@@ -1,6 +1,6 @@
 {
   "name": "redux-observable-stream-lite",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Redux observable using stream-lite",
   "source": "src/index.js",
   "main": "dist/index.js",

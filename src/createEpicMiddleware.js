@@ -1,11 +1,14 @@
 import {create, subscribe} from 'stream-lite/es'
-import {filter, switchMap} from 'stream-lite/es/operators'
+import {switchMap} from 'stream-lite/es/operators'
+import {ofType} from './ofType'
 
 export function createEpicMiddleware(epic, options = {}) {
   const epic$ = create()
   const action$ = create()
 
-  action$.ofType = type => action$.pipe(filter(action => action.type === type))
+  action$.ofType = function(...args) {
+    return ofType(...args)(this)
+  }
 
   let store
   const epicMiddleware = _store => {
