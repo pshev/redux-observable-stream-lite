@@ -1,5 +1,2 @@
 .idea
 node_modules
-/index.js
-/combineEpics.js
-/createEpicMiddleware.js
