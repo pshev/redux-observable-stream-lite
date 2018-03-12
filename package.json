@@ -16,10 +16,10 @@
   "author": "Peter Shev <piotrsevcenco@gmail.com> (http://petershev.com/)",
   "license": "MIT",
   "peerDependencies": {
-    "stream-lite": ">=3.0.0"
+    "stream-lite": ">=4.0.0"
   },
   "devDependencies": {
     "microbundle": "0.4.3",
-    "stream-lite": "3.1.0"
+    "stream-lite": "4.0.0"
   }
 }
